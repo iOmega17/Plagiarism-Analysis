@@ -8,9 +8,9 @@ if(isset($_POST["submit"])) {
 	$file_type=$_FILES['fileToUpload']['type'][$i];
 	$file_tmp = $_FILES["fileToUpload"]["tmp_name"][$i];
 	if($file_tmp !== false) {
-		move_uploaded_file($file_tmp,'C:/xampp/htdocs/plagiarism/'.$file_name);
+		move_uploaded_file($file_tmp,'Plagiarism-Analysis'.$file_name);
 		if($i==$total-1){
-		$path = "C:/xampp/htdocs/plagiarism/sss.py";
+		$path = "Plagiarism-Analysis/sss.py";
 		$api = exec($path);
 		
 		$json_data = json_decode($api,true);
